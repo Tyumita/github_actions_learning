@@ -1,7 +1,7 @@
 ---
 name: 日報テンプレ
 about: 日々の学びを日報として残すためのテンプレートです
-title: "{{ date | date('YYYY-MM-DD') }}_inatchi日報"
+title: "{{ date | date('YYYY-MM-DD') }}_日報"
 labels: ''
 assignees: ''
 
