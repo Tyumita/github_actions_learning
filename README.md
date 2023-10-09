@@ -11,7 +11,8 @@ GitHub では、ワークフローを実行するための Linux、Windows、mac
 また、自身のデータセンターまたはクラウド インフラストラクチャで独自のセルフホスト ランナーをホストすることもできます。
 
 ## github actionsに出てくる単語・用語について
-調べたことの備忘と、ReadMeが長くならないよう[こちらのwiki](https://github.com/Tyumita/github_actions_learning/wiki/%E5%8D%98%E8%AA%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)にまとめます
+調べたことの備忘は[こちらのwiki](https://github.com/Tyumita/github_actions_learning/wiki/%E7%94%A8%E8%AA%9E%E8%AA%AC%E6%98%8E)にまとめます。
+ReadMeが長くならないよう別ページにしました。
 
 
 
