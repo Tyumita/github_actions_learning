@@ -1,9 +1,11 @@
 name: Create an issue
-# on:
-  # schedule:
-  #   - cron:  '0 9 * * *' # 日本時間で毎日18時
 on:
-  workflow_dispatch:
+  schedule:
+    - cron:  '0 9 * * *' # 日本時間で毎日18時
+
+# 動作テスト
+# on:
+#   workflow_dispatch:
 
 permissions:
   contents: read
