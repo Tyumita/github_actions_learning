@@ -1,12 +1,18 @@
 ---
-name: Default issue template
-about: Describe this issue template's purpose here.
-title: '日報作成テスト'
+name: 日報テンプレ
+about: 日々の学びを日報として残すためのテンプレートです
+title: "{{ date | date('YYYY-MM-DD') }}_inatchi日報"
 labels: ''
 assignees: ''
 
 ---
 
-## やること
+## やったこと
 
-やることをここに書いてね🙃
+## うまくいったこと
+
+## うまくいかなかったこと＆改善案
+
+## 参考になったリンク集
+
+## 学習時間
