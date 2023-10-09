@@ -1,34 +1,22 @@
-# このワークフローはGitHubによって認定されていないアクションを使用します。
-# それらはサードパーティによって提供され、
-# 別個の利用規約、プライバシーポリシー、
-# ドキュメントを参照してください。
-
-# GitHub では、コミット SHA にアクションをピン留めすることが推奨されます。
-# 新しいバージョンを取得するには、SHA を更新する必要があります。
-# タグまたはブランチを参照することもできますが、アクションは警告なしに変更される可能性があります。
-
-name: daily report issue create
+name: Create an issue
 # on:
   # schedule:
   #   - cron:  '0 9 * * *' # 日本時間で毎日18時
-on: 
+on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
 jobs:
-  build:
+  createPullRequest:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
 
-    - uses: imjohnbo/extract-issue-template-fields@v1
-      id: extract
-      with:
-        path: .github/ISSUE_TEMPLATE/daily_report.md
-
-    - uses: imjohnbo/issue-bot@v3
-      with:
-        # assignees: ${{ steps.extract.outputs.assignees }}
-        # labels: ${{ steps.extract.outputs.labels }}
-        title: ${{ steps.extract.outputs.title }}
-        body: ${{ steps.extract.outputs.body }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create an Issue
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github\ISSUE_TEMPLATE\daily_report.md
