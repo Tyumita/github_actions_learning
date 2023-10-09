@@ -10,7 +10,7 @@
 name: daily report issue create
 on:
   schedule:
-    - cron: 20 07 * * 1
+    - cron:  '0 9 * * *' # 毎日18時に実行
 
 jobs:
   create_issue:

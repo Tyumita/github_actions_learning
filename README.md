@@ -10,24 +10,8 @@ GitHub Actions は、DevOps であるだけでなく、リポジトリで他の�
 GitHub では、ワークフローを実行するための Linux、Windows、macOS 仮想マシンが提供されます。
 また、自身のデータセンターまたはクラウド インフラストラクチャで独自のセルフホスト ランナーをホストすることもできます。
 
-## CI/CDについて
-### CI（Continuous Integration）
-CIはContinuous Integrationの略で日本語では「継続的インティグレーション」と呼ばれています。
-
-ソフトウェア開発における品質管理を短期間で行う手法のことで、実際には「頻繁に繰り返しビルドを実行する」といった作業を行っています。
-開発効率化や問題の早期発見などが可能になることがメリットですが、開発サイクルを短期間で回すためコストが高くついてしまうのが難点。
-
-そのためCIを導入する場合には、多くの作業を自動化してくれる「CIツール」が採用されています。
-[Circle CI](https://ja.wikipedia.org/wiki/CircleCI)や[Jenkins](https://ja.wikipedia.org/wiki/Jenkins)などのツールが有名どころです。
-
-### CD（Continuous Delivery・Continuous Deployment）
-CDは日本語で「継続的デリバリー」や「継続的デプロイメント」などと呼ばれています。
-
-継続的デリバリーとは、開発者によるコード変更に対してバグがないか自動的にテストし、実稼働環境へのリリース準備が実行される手法のこと。
-それに対し断続的デプロイメントとは、断続的デリバリーのプロセスをさらに延長し、自動的に本番環境にリリースした後、顧客が使用できるようにするというものです。
-
-## github actionsに出てくる単語について
-調べたことの備忘とReadMeが長くならないよう[こちらのwiki](https://github.com/Tyumita/github_actions_learning/wiki/%E5%8D%98%E8%AA%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)にまとめます
+## github actionsに出てくる単語・用語について
+調べたことの備忘と、ReadMeが長くならないよう[こちらのwiki](https://github.com/Tyumita/github_actions_learning/wiki/%E5%8D%98%E8%AA%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)にまとめます
 
 
 
