@@ -8,9 +8,11 @@
 # タグまたはブランチを参照することもできますが、アクションは警告なしに変更される可能性があります。
 
 name: daily report issue create
-on:
-  schedule:
-    - cron:  '0 9 * * *' # 日本時間で毎日18時
+# on:
+  # schedule:
+  #   - cron:  '0 9 * * *' # 日本時間で毎日18時
+on: 
+  workflow_dispatch:
 
 jobs:
   create_issue:
