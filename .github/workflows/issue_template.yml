@@ -18,7 +18,7 @@ jobs:
     - run: |-
         echo $ASSIGNEES $LABELS $TITLE $BODY
       env:
-        ASSIGNEES: ${{ steps.extract.outputs.assignees }}
-        LABELS: ${{ steps.extract.outputs.labels }}
+        # ASSIGNEES: ${{ steps.extract.outputs.assignees }}
+        # LABELS: ${{ steps.extract.outputs.labels }}
         TITLE: ${{ steps.extract.outputs.title }}
         BODY: ${{ steps.extract.outputs.body }}
