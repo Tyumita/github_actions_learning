@@ -15,26 +15,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  create_issue:
-    name: Create team sync issue
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-
     steps:
-      - name: Get the current date  # 作成日の取得
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-      - name: Create team sync issue
-        uses: imjohnbo/issue-bot@v3
-        with:
-          assignees: "inatchi"  # issueに割り当てるユーザー名
-          # labels: ""  # Issueに適用するラベル
-          title: "${{ steps.date.outputs.date }}_inatchi日報" # 作成日+Issueのタイトル
-          # body: 参考ファイルはここで本文内容が直書きされていたが、templateを使用するのでコメントアウト
-          pinned: false
-          close-previous: false
-          template: ".github/ISSUE_TEMPLATE/daily_report.md" # テンプレートの指定
+    - uses: imjohnbo/extract-issue-template-fields@v1
+      id: extract
+      with:
+        path: .github/ISSUE_TEMPLATE/daily_report.md
+
+    - uses: imjohnbo/issue-bot@v3
+      with:
+        assignees: ${{ steps.extract.outputs.assignees }}
+        labels: ${{ steps.extract.outputs.labels }}
+        title: ${{ steps.extract.outputs.title }}
+        body: ${{ steps.extract.outputs.body }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
