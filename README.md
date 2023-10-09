@@ -27,7 +27,7 @@ CDは日本語で「継続的デリバリー」や「継続的デプロイメン
 それに対し断続的デプロイメントとは、断続的デリバリーのプロセスをさらに延長し、自動的に本番環境にリリースした後、顧客が使用できるようにするというものです。
 
 ## github actionsに出てくる単語について
-備忘のために[こちら](https://github.com/Tyumita/github_actions_learning/wiki/%E5%8D%98%E8%AA%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)にまとめるようにします
+調べたことの備忘とReadMeが長くならないよう[こちらのwiki](https://github.com/Tyumita/github_actions_learning/wiki/%E5%8D%98%E8%AA%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)にまとめます
 
 
 
